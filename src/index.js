@@ -158,11 +158,83 @@
 
 //配列のコピーや結合
 
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-console.log(arr6);
+// const arr6 = [...arr4];
+// console.log(arr6);
 
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+
+const nameArr = ["田中","山田","コンスケ"];
+// for (let index = 0; index < nameArr.length; index++){
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+
+// const nameArr2 = nameArr.map((name)=>{
+//   return name;
+// })
+// console.log(nameArr2);
+
+// nameArr.map((name, index)=>console.log(`${index + 1}番目は${nameArr[index]}です`));
+
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num)=>{
+//   return num % 2 === 0;
+// });
+// console.log(newNumArr);
+
+// const newNameArr = nameArr.map((name) =>{
+//   if(name === "コンスケ"){
+//     return name
+//   } else {
+//     return`${name}さん`
+// }
+// })
+// console.log(newNameArr)
+
+/**
+ * 三項演算子
+ */
+// ある条件？条件がtrueの時　　：　条件がfolseの時
+// const val1 = 1 < 0 ? `trueです` : `falseです`
+// console.log(val1);
+
+// const num = 1300;
+// num.toLocaleString();
+
+// const formattedNum = typeof num === `number` ? num.toLocaleString() : `数値を入力してください`;
+// console.log(formattedNum)
+
+// const checkSum = (num1 , num2) => {
+//   return num1 + num2 > 100 ?`100を超えています` :`許容範囲ないです` 
+// }
+// console.log(checkSum(50, 80))
+
+/**
+ * 論理演算子の本当の意味を知ろう && ||
+ */
+
+//  const flag1 = true;
+//  const flag2 = false;
+
+//  if (flag1 || flag2){
+//    console.log(`1か2はtrueになります`)
+//  }
+
+//  if (flag1 && flag2){
+//   console.log(`1も2はtrueになります`)
+// }
+
+//||の左側がfalseの時右側を返す
+
+const num = null;
+const fee = num ||"金額未設定です";
+console.log(fee)
+
+//&&の左側がtrueなら右側を返す
+const num2 = null;
+const fee2 = num2 && "金額設定されました";
+console.log(fee2)
